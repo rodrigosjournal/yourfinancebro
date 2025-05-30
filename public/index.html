@@ -1,394 +1,46 @@
-/* General Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourFinanceBro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container"> 
+            <nav class="navbar"> 
+                <a href="/" class="nav-logo">#####</a>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu"> 
+                    <li class="nav-item"><a href="reach" class="nav-link">Reach</a></li> 
+                    <li class="nav-item"><a href="login" class="nav-link">Log in</a></li>                    
+                </ul> 
+            </nav> 
+        </div> 
+    </header>
 
-/* Custom fintech accent colors */
-:root {
-    --text-primary: rgba(255, 255, 255, 0.9);
-    --text-secondary: rgba(255, 255, 255, 0.7);
-    --background: #000000;
-    --accent: #ffffff;
-}
+    <main>
+        <section class="hero">
+            <div class="hero-left">
+                <h1 class="hero-title">Stack Now, <br> Flex Later.</h1>
+                <a href="/auth/github" class="github-login">
+                    <i class="fab fa-github"></i>
+                    Continue with GitHub
+                </a>
+            </div>
+            <div class="hero-right">
+                <!-- Right column can be used for features or illustrations -->
+            </div>
+        </section>
+    </main>
 
-/* Base Styles */
-body {
-    line-height: 1.6;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.9);
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif;
-    padding-top: 80px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    min-height: 100vh;
-}
+    <footer>
+    </footer>
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
-    letter-spacing: -0.02em;
-    font-weight: 600;
-}
-
-/* Header and Navigation */
-header {
-    background: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 20px 0;
-}
-
-header .container {
-    width: 95%;
-    padding: 0 25px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.nav-logo {
-    font-size: 1.3em;
-    font-weight: 400;
-    color: #1429e1;
-    text-decoration: none;
-    letter-spacing: -0.02em;
-    z-index: 2;
-}
-
-.nav-logo img {
-    height: 32px;
-    vertical-align: middle;
-}
-
-.nav-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 2;
-}
-
-.hamburger {
-    display: block;
-    position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    width: 2em;
-    height: 3px;
-    background: #1429e1;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-}
-
-.hamburger::before { top: -8px; }
-.hamburger::after { bottom: -8px; }
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-
-.nav-item {
-    margin-left: 32px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #1429e1;
-    font-weight: 500;
-    padding: 5px 0;
-    transition: all 0.2s ease;
-}
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.nav-actions .sign-in-link {
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-actions .sign-in-link:hover {
-    color: #ffffff;
-}
-
-/* Hero Section */
-.hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    min-height: 80vh;
-    padding: 2rem 4rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.hero-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.hero-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(20, 41, 225, 0.03);
-    border-radius: 20px;
-    padding: 2rem;
-}
-
-.hero-title {
-    font-size: 6rem;
-    font-weight: 300;
-    color: #1429e1;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #666;
-    max-width: 600px;
-    line-height: 1.4;
-    margin: 0;
-    text-align: left;
-}
-
-/* Buttons */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    text-align: center;
-    transition: all 0.2s ease;
-    font-size: 0.95rem;
-}
-
-.button:hover {
-    background: linear-gradient(45deg, #1429e1 0%, #1f34e8 100%);
-    transform: translateY(-1px);
-    transition: all 0.3s ease;
-}
-
-.nav-cta-button {
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-}
-
-.nav-cta-button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-/* GitHub Login Button */
-.github-login {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.75rem;
-    background: #24292e;
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    width: auto;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.github-login:hover {
-    background: #1a1f23;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.github-login i {
-    font-size: 1.25rem;
-}
-
-/* Form Elements */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.form-group label {
-    color: #666;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.form-group input {
-    padding: 0.75rem 1rem;
-    border: 1px solid rgba(20, 41, 225, 0.1);
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: #1429e1;
-    box-shadow: 0 0 0 2px rgba(20, 41, 225, 0.1);
-}
-
-/* Login Form Elements */
-.remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.remember {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.forgot-link {
-    color: #1429e1;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.forgot-link:hover {
-    text-decoration: underline;
-}
-
-.login-button {
-    background: #1429e1;
-    color: white;
-    border: none;
-    padding: 0.875rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.login-button:hover {
-    background: #111fb8;
-    transform: translateY(-1px);
-}
-
-.signup-prompt {
-    text-align: center;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.signup-prompt a {
-    color: #1429e1;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.signup-prompt a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
-    
-    .hero-title {
-        font-size: 4rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .github-login {
-        font-size: 1rem;
-        padding: 0.875rem 1.25rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        min-height: 100vh;
-        background: #ffffff;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        padding: 2rem;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .nav-menu.active {
-        transform: translateX(0);
-    }
-
-    .nav-item {
-        margin: 0;
-    }
-
-    .nav-link {
-        font-size: 1.5rem;
-    }
-
-    /* Hamburger animation */
-    .nav-toggle.active .hamburger {
-        transform: rotate(45deg);
-    }
-
-    .nav-toggle.active .hamburger::before {
-        transform: rotate(0) translateY(8px);
-        opacity: 0;
-    }
-
-    .nav-toggle.active .hamburger::after {
-        transform: rotate(-90deg) translateX(8px);
-    }
-}
+    <script src="js/main.js"></script>
+</body>
+</html>
