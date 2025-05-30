@@ -15,7 +15,7 @@
                     <a href="/" class="nav-logo">#####</a>
                     <ul class="nav-menu"> 
                         <li class="nav-item"><a href="reach" class="nav-link">Reach</a></li> 
-                        <li class="nav-item"><a href="login" class="nav-link">Log in</a></li>                    
+                        <li class="nav-item"><a href="login" class="nav-link">Privacy Terms</a></li>                    
                     </ul> 
                 </nav>
             </header>
@@ -29,18 +29,18 @@
                         <button id="loadCsvButton" class="login-submit">Load Data</button>
                         <small class="upload-description">Upload a CSV and click "Load Data" to see transactions.</small>
                     </div>
-
-                    <hr>
-
-                    <h2>Loaded Transactions</h2>
-                    <div id="transactionsTableContainer">
-                    </div>
                 </div>
             </div>
         </div>
         <div class="right-column">
-            <div class="hero-content">
+            <div id="hero-content" class="hero-content">
                 <h1 class="hero-title">Your <br> Transactions.</h1>
+            </div>
+            <div id="transactions-container" class="transactions-container hidden">
+                <h2>Loaded Transactions</h2>
+                <div id="transactionsTableContainer">
+                    <p class="error-message">Error: DuckDB-WASM library failed to load. Please check your internet connection or script paths.</p>
+                </div>
             </div>
         </div>
     </div>
