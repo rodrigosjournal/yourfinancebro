@@ -1,0 +1,95 @@
+/* Reset some default browser styles (optional but common) */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes width and height calculations more intuitive */
+    font-family: sans-serif; /* Basic font, you'll want to choose something nicer */
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light grey background, similar to societies.io feel */
+    color: #333; /* Default text color */
+}
+
+header {
+    background: #333; /* Dark background for header */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center; /* Center nav for now */
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+#hero {
+    background: #fff; /* White background for the hero section */
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+#hero h1 {
+    margin-bottom: 10px;
+    color: #2c3e50; /* A darker, more modern blue/grey */
+}
+
+#hero p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3498db; /* A nice blue, similar to societies.io's accent */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Add more specific styles as you build out sections */
+/* For example:
+#about {
+    background: #e9e9e9;
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+*/
