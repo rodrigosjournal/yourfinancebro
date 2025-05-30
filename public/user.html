@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourFinanceBro PoC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>ING Transactions Viewer</h1>
+
+    <div>
+        <label for="ingCsvInput">Upload ING CSV:</label>
+        <input type="file" id="ingCsvInput" accept=".csv">
+        <button id="loadCsvButton">Load Data</button>
+    </div>
+
+    <hr>
+
+    <h2>Loaded Transactions</h2>
+    <div id="transactionsTableContainer">
+        <p>Upload a CSV and click "Load Data" to see transactions.</p>
+    </div>
+
+    <script src="https://unpkg.com/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-mvp.js"></script>
+    <script src="https://unpkg.com/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-eh.js"></script>
+    <script src="https://unpkg.com/@duckdb/duckdb-wasm@1.28.0/dist/duckdb.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
