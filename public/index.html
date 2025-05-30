@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YourFinanceBro</title>
+    <title>YourFinanceBro PoC</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -20,28 +20,34 @@
                 </nav>
             </header>
             <div class="left-content">
-                <div class="login-wrapper">
-                    <form class="login-form">
-                        <div class="form-container">
-                            <div class="form-group">
-                                <input type="text" id="username" placeholder="Username" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" id="password" placeholder="Password" required>
-                            </div>
-                            <button type="submit" class="login-submit">Log in</button>
-                        </div>
-                    </form>
+                <div class="container">
+                    <h1>ING Transactions Viewer</h1>
+
+                    <div class="upload-section">
+                        <label for="ingCsvInput">Upload ING CSV:</label>
+                        <input type="file" id="ingCsvInput" accept=".csv">
+                        <button id="loadCsvButton" class="login-submit">Load Data</button>
+                        <small class="upload-description">Upload a CSV and click "Load Data" to see transactions.</small>
+                    </div>
+
+                    <hr>
+
+                    <h2>Loaded Transactions</h2>
+                    <div id="transactionsTableContainer">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="right-column">
             <div class="hero-content">
-                <h1 class="hero-title">Stack Now, <br> Flex Later.</h1>
+                <h1 class="hero-title">Your <br> Transactions.</h1>
             </div>
         </div>
     </div>
 
+    <script src="https://unpkg.com/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-mvp.js"></script>
+    <script src="https://unpkg.com/@duckdb/duckdb-wasm@1.28.0/dist/duckdb-eh.js"></script>
+    <script src="https://unpkg.com/@duckdb/duckdb-wasm@1.28.0/dist/duckdb.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
