@@ -140,4 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
             headers.forEach(header => {
                 tableHtml += `<td style="padding: 8px; border: 1px solid #ddd;">${row[header] !== null ? row[header] : ''}</td>`;
             });
-            tableHtml
+            tableHtml += '</tr>';
+        });
+
+        tableHtml += '</tbody></table>';
+        container.innerHTML = tableHtml;
+    }
+});
