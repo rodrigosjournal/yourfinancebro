@@ -411,3 +411,26 @@ hr {
     border-top: 1px solid rgba(20, 41, 225, 0.1);
     margin: 2rem 0;
 }
+
+.hidden {
+    display: none !important;
+}
+
+.transactions-container {
+    padding: 2rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.transactions-container h2 {
+    color: #1429e1;
+    margin-bottom: 1.5rem;
+}
+
+.error-message {
+    color: #e14314;
+    background: rgba(225, 67, 20, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
