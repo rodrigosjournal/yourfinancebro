@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const csvFileInput = document.getElementById('ingCsvInput');
     const loadCsvButton = document.getElementById('loadCsvButton');
     const transactionsTableContainer = document.getElementById('transactionsTableContainer');
+    const heroContent = document.getElementById('hero-content');
+    const transactionsContainer = document.getElementById('transactions-container');
 
     let duckdb = null; // Will hold the DuckDB module after CDN load
     let db = null;     // Will hold the AsyncDuckDB instance
@@ -63,6 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Hide hero content and show transactions container
+        heroContent.classList.add('hidden');
+        transactionsContainer.classList.remove('hidden');
+        
         transactionsTableContainer.innerHTML = "<p>Loading and processing data...</p>";
 
         try {
